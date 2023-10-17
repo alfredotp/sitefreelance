@@ -279,7 +279,8 @@ h1,h2,h3 {
      border-radius: .5rem;
 }
 
-.btn-whatsapp {
+.btn-whatsapp-desktop,
+.btn-whatsapp-mobile {
      background-color: #25D366;
      border: 1px solid #000;
      border-radius: 50%;
@@ -292,16 +293,25 @@ h1,h2,h3 {
      animation: efecto 1.2s infinite;
 }
 
-.btn-whatsapp:hover {
+.btn-whatsapp-desktop:hover,
+.btn-whatsapp-mobile:hover {
      transform: scale(1.1);
      transform: 0.3s;
 }
 
-.btn-whatsapp a svg.icon {
+.btn-whatsapp-desktop a svg.icon,
+.btn-whatsapp-mobile a svg.icon {
      width: 55px;
      height: 55px;
      transition: ease 1s;
 }
+
+@media (min-width: 768px) {
+     .btn-whatsapp-mobile {
+          display: none;
+     }
+}
+
 
 @keyframes efecto {
      0%{
